@@ -309,6 +309,51 @@ body > main {
 #campus-stores textarea {
   resize: vertical;
 }
+#campus-stores .buttons.tight {
+  margin: 0;
+}
+#campus-stores .rowactions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#campus-stores .tag.late {
+  background: transparent;
+  border: 1px solid var(--mark);
+  color: var(--mark);
+  font-weight: 600;
+}
+#campus-stores .row.attention {
+  box-shadow: inset 3px 0 var(--mark);
+  padding-left: 10px;
+}
+#campus-stores .lead {
+  margin-bottom: 4px;
+}
+#campus-stores .checkin {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 10px 0 0;
+  padding: 8px 12px 0;
+}
+#campus-stores .checkin legend {
+  padding: 0 4px;
+}
+#campus-stores .form.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#campus-stores .checkin:not([data-out]) .whenout {
+  display: none;
+}
+#campus-stores .confirm {
+  margin: 0 0 10px;
+  border-left-color: var(--mark);
+}
+#campus-stores .confirm .buttons {
+  margin-bottom: 0;
+}
 #campus-stores .statusbar {
   background: var(--desk);
   border-top: 1px solid var(--line);
@@ -353,7 +398,8 @@ body > main {
   }
 }
 @container (max-width:420px) {
-  #campus-stores .form {
+  #campus-stores .form,
+  #campus-stores .form.three {
     grid-template-columns: minmax(0, 1fr);
   }
   #campus-stores .brandmark {
